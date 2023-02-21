@@ -2,3 +2,4 @@ node_modules
 dist
 build
 react-app-env.d.ts
+.package.json
