@@ -22,5 +22,20 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "scope": "/"
+  "scope": "/",
+
+	"shortcuts": [
+		{
+			"name": "Home",
+			"short_name": "Home",
+			"url": "/",
+			"icons": [
+				{
+					"src": "logo192.png",
+					"type": "image/png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	]
 }
