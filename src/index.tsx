@@ -13,8 +13,6 @@ const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
 );
 
-console.log(process.env.REACT_APP_BASE_API);
-
 root.render(
 	<React.StrictMode>
 		<ErrorBoundary FallbackComponent={ErrorFallback}>
