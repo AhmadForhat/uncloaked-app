@@ -8,6 +8,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import Router from './Router';
 import GlobalStyle from 'themes/globalstyles';
 import { AuthProvider } from 'context/Auth';
+import { ThemeProvider } from 'styled-components';
+import { tokens } from 'themes/tokens';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
@@ -16,10 +18,12 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<GlobalStyle />
-			<AuthProvider>
-				<Router />
-			</AuthProvider>
+			<ThemeProvider theme={tokens}>
+				<GlobalStyle />
+				<AuthProvider>
+					<Router />
+				</AuthProvider>
+			</ThemeProvider>
 		</ErrorBoundary>
 	</React.StrictMode>,
 );
