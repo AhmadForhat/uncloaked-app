@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 	img {
 		width: 100%;
+		max-width: 360px;
 		margin: 0 auto;
 	}
 `;

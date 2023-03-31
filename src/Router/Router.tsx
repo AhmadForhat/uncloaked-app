@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from 'Views/Privative/Home';
 
 import Introduction from 'Views/Public/Introduction';
-import Login from 'Views/Public/Login';
+import AnalyticsTree from 'Views/Public/AnalyticsTree';
+import AnalyticsCardSorting from 'Views/Public/AnalyticsCardSorting';
+import AnalyticsUseBerry from 'Views/Public/AnalyticsUseBerry';
 
 import { AuthContext } from 'context/Auth';
 
@@ -24,8 +26,16 @@ const Router = (): JSX.Element => {
 			element: <Introduction />,
 		},
 		{
-			path: '/login',
-			element: <Login />,
+			path: '/analytics-tree',
+			element: <AnalyticsTree />,
+		},
+		{
+			path: 'analytics-card-sorting',
+			element: <AnalyticsCardSorting />,
+		},
+		{
+			path: 'analytics-useberry',
+			element: <AnalyticsUseBerry />,
 		},
 	]);
 

@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Login from '..';
+import AnalyticsTree from '..';
 
 describe('Login', () => {
 	it('Should render the login container', () => {
-		render(<Login />);
+		render(<AnalyticsTree />);
 
-		expect(screen.getByTestId('login-container')).toBeInTheDocument();
+		expect(screen.getByTestId('analytic-tree-container')).toBeInTheDocument();
 	});
 });

@@ -31,7 +31,7 @@ const Introduction = () => {
 	const navigate = useNavigate();
 	const [currentStepName, setCurrentStepName] = useState<stepsProps>('style');
 
-	const handleGoToLogin = () => navigate('/login');
+	const handleGoToLogin = () => navigate('/analytics-tree');
 
 	const steps = {
 		style: {
@@ -60,7 +60,7 @@ const Introduction = () => {
 		},
 	};
 
-	const { image, title, text, onNext, onSkip, lineActived }: StepProp =
+	const { image, title, text, onNext, onSkip, lineActived, alt }: StepProp =
 		steps[currentStepName];
 
 	return (
@@ -69,7 +69,7 @@ const Introduction = () => {
 				<Line actived={lineActived.first} />
 				<Line actived={lineActived.second} />
 			</ContainerStepLines>
-			<img alt="" src={image} />
+			<img alt={alt} src={image} />
 			<ContainerContent>
 				<h2>{title}</h2>
 				<p>{text}</p>
